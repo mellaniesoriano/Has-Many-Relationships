@@ -41,3 +41,9 @@ SELECT posts.title AS post_title, posts.url AS post_url, comments.body AS commen
 FROM posts INNER JOIN comments
 ON posts.id = comments.posts_id
 WHERE posts.created_at > '2015-01-01';
+
+-- Create a query to get the all rows in the comments table, showing post title (aliased as post_title), post url (ailased as post_url), and the comment body (aliased as comment_body) where the comment body contains the word 'USB'
+SELECT posts.title AS post_title, posts.url AS post_url, comments.body AS comment_body
+FROM posts INNER JOIN comments
+ON posts.id = comments.posts_id
+WHERE comments.body LIKE '%USB%';
