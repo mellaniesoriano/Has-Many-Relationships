@@ -35,3 +35,4 @@ SELECT posts.title AS PostTitle, posts.url AS post_url, comments.body AS comment
 FROM posts INNER JOIN comments
 ON posts.id = comments.posts_id
 WHERE posts.created_at < '2015-01-01';
+
