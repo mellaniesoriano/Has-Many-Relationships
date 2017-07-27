@@ -6,5 +6,10 @@ CREATE DATABASE has_many_blogs WITH OWNER has_many_user;
 
 DROP TABLE IF EXISTS users;
 CREATE TABLE users (
-
+  id SERIAL PRIMARY KEY,
+  username VARCHAR(90),
+  first_name VARCHAR(90) DEFAULT NULL,
+  last_name VARCHAR(90) DEFAULT NULL,
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+  updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
