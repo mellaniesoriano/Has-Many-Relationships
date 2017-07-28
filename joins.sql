@@ -62,7 +62,7 @@ SELECT users.first_name, users.last_name, comments.body AS comment_body
 FROM users INNER JOIN posts
 ON users.id = posts.users_id
 INNER JOIN comments
-ON comments.posts_id = posts.users_id
+ON comments.posts_id = posts.id
 WHERE comments.body LIKE '%SSL%' AND posts.content LIKE '%dolorum%';
 
 
