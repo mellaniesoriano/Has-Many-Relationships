@@ -10,7 +10,7 @@ FROM posts INNER JOIN users
 ON posts.users_id = users.id WHERE users_id = 200;
 
 -- Create a query to get all posts fields, and the user's username, from the posts table where the user's first name is 'Norene' and the user's last_name is 'Schmitt'
-SELECT users.first_name, users.last_name, posts.*
+SELECT users.username, posts.*
 FROM posts INNER JOIN users
 ON posts.users_id = users.id WHERE users.first_name = 'Norene'
 AND users.last_name = 'Schmitt';
@@ -73,3 +73,10 @@ FROM comments
 INNER JOIN posts ON comments.posts_id = posts.id
 INNER JOIN users ON posts.users_id = users.id
 WHERE (comments.body LIKE '%SSL%' OR comments.body LIKE '%firewall%') AND posts.content LIKE '%nemo%';
+
+
+-- Count how many comments have been written on posts that have been created after July 14, 2015 ( should have one result, the value of the count should be 27)
+SELECT COUNT()
+
+
+-- Find all users who comment about 'programming' ( should have 336 results)
