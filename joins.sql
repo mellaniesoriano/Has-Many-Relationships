@@ -53,7 +53,7 @@ SELECT posts.title AS post_title, users.first_name, users.last_name, comments.bo
 FROM posts INNER JOIN users
 ON posts.users_id = users.id
 LEFT JOIN comments
-ON posts_id = comments.posts_id
+ON posts.id = comments.posts_id
 WHERE comments.body LIKE '%matrix%';
 
 
